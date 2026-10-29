@@ -1,0 +1,29 @@
+[package]
+name = "loai"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
+description = "loai — 極限最適化ローカルコーディングエージェント (16GB RAM + Intel iGPU 向け)"
+license = "MIT"
+repository = "https://github.com/kagurasumusun/loai"
+readme = "README.md"
+keywords = ["llm", "llama-cpp", "coding-agent", "cli", "local"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ureq = { version = "2", features = ["json"] }
+crossterm = "0.28"
+regex = "1"
+sha2 = "0.10"
+hex = "0.4"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+
+[profile.release]
+opt-level = 2
+lto = false
+codegen-units = 16
+strip = true

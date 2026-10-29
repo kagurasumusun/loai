@@ -1,0 +1,263 @@
+{
+  "$schema": "loai-models/1",
+  "profiles": [
+    {
+      "id": "qwen3-8b",
+      "name": "Qwen3-8B (Q4_K_M)",
+      "family": "qwen3",
+      "desc": "主力バランスプロファイル。16GB RAM における品質・速度・メモリの最適点。思考モード対応の最新世代。",
+      "tags": ["主力", "エージェント", "思考モード"],
+      "weights_bytes": 5027784224,
+      "min_ram_gb": 10,
+      "recommended_ram_gb": 16,
+      "experimental": false,
+      "kv_bytes_per_token": 147456,
+      "tuning": {
+        "ctx": 16384,
+        "kv_quant": "q8_0",
+        "ngl": null,
+        "fa": true,
+        "jinja": true,
+        "hybrid_thinking": true
+      },
+      "hf": {
+        "repo": "bartowski/Qwen_Qwen3-8B-GGUF",
+        "file": "Qwen_Qwen3-8B-Q4_K_M.gguf",
+        "size": 5027784224,
+        "sha256": "54fffa050078e984116639c83dfb64b5aa6d4cd474e018b076777c632bbccccd"
+      },
+      "gh": {
+        "repo": "kagurasumusun/loai",
+        "tag": "model-qwen3-8b",
+        "parts": [
+          "Qwen_Qwen3-8B-Q4_K_M.gguf.part-000",
+          "Qwen_Qwen3-8B-Q4_K_M.gguf.part-001",
+          "Qwen_Qwen3-8B-Q4_K_M.gguf.part-002"
+        ],
+        "size": 5027784224,
+        "sha256": "54fffa050078e984116639c83dfb64b5aa6d4cd474e018b076777c632bbccccd"
+      }
+    },
+    {
+      "id": "qwen2.5-coder-7b",
+      "name": "Qwen2.5-Coder-7B-Instruct (Q4_K_M)",
+      "family": "qwen25-coder",
+      "desc": "コーディング特化。バグ修正・リファクタ・FIM 補完に強く、エージェント用途でも安定。",
+      "tags": ["コーディング特化"],
+      "weights_bytes": 4683074336,
+      "min_ram_gb": 8,
+      "recommended_ram_gb": 16,
+      "experimental": false,
+      "kv_bytes_per_token": 57344,
+      "tuning": {
+        "ctx": 16384,
+        "kv_quant": "q8_0",
+        "ngl": null,
+        "fa": true,
+        "jinja": true,
+        "hybrid_thinking": false
+      },
+      "hf": {
+        "repo": "bartowski/Qwen2.5-Coder-7B-Instruct-GGUF",
+        "file": "Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf",
+        "size": 4683074336,
+        "sha256": "1664fccab734674a50763490a8c6931b70e3f2f8ec10031b54806d30e5f956b6"
+      },
+      "gh": {
+        "repo": "kagurasumusun/loai",
+        "tag": "model-qwen2.5-coder-7b",
+        "parts": [
+          "Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf.part-000",
+          "Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf.part-001",
+          "Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf.part-002"
+        ],
+        "size": 4683074336,
+        "sha256": "1664fccab734674a50763490a8c6931b70e3f2f8ec10031b54806d30e5f956b6"
+      }
+    },
+    {
+      "id": "qwen3-4b-2507",
+      "name": "Qwen3-4B-Instruct-2507 (Q4_K_M)",
+      "family": "qwen3",
+      "desc": "2025年7月更新の高速モデル。非思考で即答。軽量 PC・高速サイクル向け。",
+      "tags": ["高速", "軽量"],
+      "weights_bytes": 2497280736,
+      "min_ram_gb": 8,
+      "recommended_ram_gb": 12,
+      "experimental": false,
+      "kv_bytes_per_token": 147456,
+      "tuning": {
+        "ctx": 16384,
+        "kv_quant": "q8_0",
+        "ngl": null,
+        "fa": true,
+        "jinja": true,
+        "hybrid_thinking": false
+      },
+      "hf": {
+        "repo": "bartowski/Qwen_Qwen3-4B-Instruct-2507-GGUF",
+        "file": "Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+        "size": 2497280736,
+        "sha256": "2fde00ce69dd4899c70d020845e2638353015bba0fdf161b3eb965f2bca4464e"
+      },
+      "gh": {
+        "repo": "kagurasumusun/loai",
+        "tag": "model-qwen3-4b-2507",
+        "parts": [
+          "Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf.part-000",
+          "Qwen_Qwen3-4B-Instruct-2507-Q4_K_M.gguf.part-001"
+        ],
+        "size": 2497280736,
+        "sha256": "2fde00ce69dd4899c70d020845e2638353015bba0fdf161b3eb965f2bca4464e"
+      }
+    },
+    {
+      "id": "qwen3-14b-tight",
+      "name": "Qwen3-14B (IQ3_XXS 極限圧縮)",
+      "family": "qwen3",
+      "desc": "[実験] 16GB に載る最大級 Dense モデル。imatrix 済み 3bit 量子化 + KV q4_0 で約 6.4GB に収める構成。品質重視だが量子化劣化あり。",
+      "tags": ["実験", "大規模", "高品質"],
+      "weights_bytes": 5942666272,
+      "min_ram_gb": 10,
+      "recommended_ram_gb": 16,
+      "experimental": true,
+      "kv_bytes_per_token": 163840,
+      "tuning": {
+        "ctx": 16384,
+        "kv_quant": "q4_0",
+        "ngl": null,
+        "fa": true,
+        "jinja": true,
+        "hybrid_thinking": true
+      },
+      "hf": {
+        "repo": "bartowski/Qwen_Qwen3-14B-GGUF",
+        "file": "Qwen_Qwen3-14B-IQ3_XXS.gguf",
+        "size": 5942666272,
+        "sha256": "a814fb65a1600c17db566cfc8496cadcb5be0883a58b33d289a9e3eefc157c14"
+      },
+      "gh": {
+        "repo": "kagurasumusun/loai",
+        "tag": "model-qwen3-14b-tight",
+        "parts": [
+          "Qwen_Qwen3-14B-IQ3_XXS.gguf.part-000",
+          "Qwen_Qwen3-14B-IQ3_XXS.gguf.part-001",
+          "Qwen_Qwen3-14B-IQ3_XXS.gguf.part-002"
+        ],
+        "size": 5942666272,
+        "sha256": "a814fb65a1600c17db566cfc8496cadcb5be0883a58b33d289a9e3eefc157c14"
+      }
+    },
+    {
+      "id": "gpt-oss-20b",
+      "name": "gpt-oss-20b (MXFP4)",
+      "family": "gpt-oss",
+      "desc": "[実験] OpenAI オープンウェイト MoE (活性 3.6B)。コーディング・エージェント特化。約 11.3GB 必要なため 16GB PC では他アプリ完全終了が前提。32GB 推奨。",
+      "tags": ["実験", "大規模", "MoE"],
+      "weights_bytes": 12109566624,
+      "min_ram_gb": 20,
+      "recommended_ram_gb": 32,
+      "experimental": true,
+      "kv_bytes_per_token": 49152,
+      "tuning": {
+        "ctx": 8192,
+        "kv_quant": null,
+        "ngl": null,
+        "fa": false,
+        "jinja": true,
+        "hybrid_thinking": false
+      },
+      "hf": {
+        "repo": "ggml-org/gpt-oss-20b-GGUF",
+        "file": "gpt-oss-20b-MXFP4.gguf",
+        "size": 12109566624,
+        "sha256": "27cd6c432c7672cb812a92f611cf3ba7bbc35928262bb1e1253ff4ee6ae35901"
+      },
+      "gh": {
+        "repo": "kagurasumusun/loai",
+        "tag": "model-gpt-oss-20b",
+        "parts": [
+          "gpt-oss-20b-MXFP4.gguf.part-000",
+          "gpt-oss-20b-MXFP4.gguf.part-001",
+          "gpt-oss-20b-MXFP4.gguf.part-002",
+          "gpt-oss-20b-MXFP4.gguf.part-003",
+          "gpt-oss-20b-MXFP4.gguf.part-004",
+          "gpt-oss-20b-MXFP4.gguf.part-005",
+          "gpt-oss-20b-MXFP4.gguf.part-006"
+        ],
+        "size": 12109566624,
+        "sha256": "27cd6c432c7672cb812a92f611cf3ba7bbc35928262bb1e1253ff4ee6ae35901"
+      }
+    },
+    {
+      "id": "qwen2.5-coder-3b",
+      "name": "Qwen2.5-Coder-3B-Instruct (Q4_K_M)",
+      "family": "qwen25-coder",
+      "desc": "超軽量コーディング。8GB クラス PC や長時間連続稼働向け。",
+      "tags": ["超軽量"],
+      "weights_bytes": 1929903360,
+      "min_ram_gb": 6,
+      "recommended_ram_gb": 8,
+      "experimental": false,
+      "kv_bytes_per_token": 16384,
+      "tuning": {
+        "ctx": 16384,
+        "kv_quant": "q8_0",
+        "ngl": null,
+        "fa": true,
+        "jinja": true,
+        "hybrid_thinking": false
+      },
+      "hf": {
+        "repo": "bartowski/Qwen2.5-Coder-3B-Instruct-GGUF",
+        "file": "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf",
+        "size": 1929903360,
+        "sha256": "3da3afe6cf5c674ac195803ea0dd6fee7e1c228c2105c1ce8c66890d1d4ab460"
+      },
+      "gh": {
+        "repo": "kagurasumusun/loai",
+        "tag": "model-qwen2.5-coder-3b",
+        "parts": [
+          "Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf.part-000"
+        ],
+        "size": 1929903360,
+        "sha256": "3da3afe6cf5c674ac195803ea0dd6fee7e1c228c2105c1ce8c66890d1d4ab460"
+      }
+    },
+    {
+      "id": "qwen2.5-coder-1.5b",
+      "name": "Qwen2.5-Coder-1.5B-Instruct (Q4_K_M)",
+      "family": "qwen25-coder",
+      "desc": "最小構成 (約 1GB)。動作確認・古い PC・組み込み向け。",
+      "tags": ["最小", "検証用"],
+      "weights_bytes": 986048800,
+      "min_ram_gb": 4,
+      "recommended_ram_gb": 6,
+      "experimental": false,
+      "kv_bytes_per_token": 16384,
+      "tuning": {
+        "ctx": 16384,
+        "kv_quant": "q8_0",
+        "ngl": null,
+        "fa": true,
+        "jinja": true,
+        "hybrid_thinking": false
+      },
+      "hf": {
+        "repo": "bartowski/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+        "file": "Qwen2.5-Coder-1.5B-Instruct-Q4_K_M.gguf",
+        "size": 986048800,
+        "sha256": "f530705d447660a4336c329981af164b471b60b974b1d808d57e8ec9fe23b239"
+      },
+      "gh": {
+        "repo": "kagurasumusun/loai",
+        "tag": "model-qwen2.5-coder-1.5b",
+        "parts": [
+          "Qwen2.5-Coder-1.5B-Instruct-Q4_K_M.gguf.part-000"
+        ],
+        "size": 986048800,
+        "sha256": "f530705d447660a4336c329981af164b471b60b974b1d808d57e8ec9fe23b239"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+
+# loai runtime data
+.loai/
+*.gguf
+*.gguf.part-*
+*.loai-manifest.json
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
